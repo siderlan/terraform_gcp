@@ -17,3 +17,11 @@ variable "app_name" {
   type = string
   default = "blog"
 }
+
+variable "gitlab_api_token" {
+  type = string
+}
+
+variable "gitlab_read_api_token" {
+  type = string
+}

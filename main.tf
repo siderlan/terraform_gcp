@@ -27,3 +27,12 @@ module "prod" {
   app_name     = "prod-blog"
   network_name = "prod"
 }
+
+module "cloudbuild-gitlab-connection" {
+  source = "./modules/cloudbuild_gitlab_connection"
+
+  project_id              = var.project_id
+  region                  = var.region
+  gitlab_api_token        = var.gitlab_api_token
+  gitlab_read_api_token   = var.gitlab_read_api_token
+}
