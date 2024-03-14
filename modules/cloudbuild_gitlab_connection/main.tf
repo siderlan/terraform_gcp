@@ -36,7 +36,7 @@ module "cloudbuild_secret_manager" {
 
 resource "google_secret_manager_secret_iam_binding" "binding" {
   project   = var.project_id
-  for_each  = module.cloudbuild_secret_manager.secret_names
+  for_each  = { for k, secret in flatten(module.cloudbuild_secret_manager.secret_names) : k => secret }
   secret_id = each.value
   role      = "roles/secretmanager.secretAccessor"
   members   = [local.cloudbuild_sa]
