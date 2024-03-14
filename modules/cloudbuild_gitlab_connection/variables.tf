@@ -23,6 +23,6 @@ variable "gitlab_read_api_token" {
 
 variable "gitlab_webhook_token" {
   type = string
-  default = ""
+  default = "not-used-now"
   sensitive = true
 }
