@@ -32,11 +32,11 @@ locals {
   repositories = [
     {
       name = "playground-svc"
-      uri  = "https://gitlab.com/ferreri/angeplus/angeplus-playground-svc"
+      uri  = "https://gitlab.com/ferreri/angeplus/angeplus-playground-svc.git"
     },
     {
       name = "term-svc"
-      uri  = "https://gitlab.com/ferreri/angeplus/angeplus-term-svc"
+      uri  = "https://gitlab.com/ferreri/angeplus/angeplus-term-svc.git"
     }
   ]
 }
