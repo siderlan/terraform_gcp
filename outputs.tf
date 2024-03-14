@@ -9,3 +9,7 @@ output "staging_ip" {
 output "prod_ip" {
   value = module.prod.public_ip
 }
+
+output "cloudbuild_gitlab_connection_id" {
+  value = module.cloudbuild-gitlab-connection.cloudbuild_gitlab_connection_id
+}
