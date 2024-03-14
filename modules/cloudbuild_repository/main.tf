@@ -6,11 +6,12 @@ resource "google_cloudbuildv2_repository" "cloudbuild_repository" {
 }
 
 resource "google_cloudbuild_trigger" "cloudbuild_qas_trigger" {
+  name = "${var.repo_name}-qas"
   location = var.location
   repository_event_config {
     repository = google_cloudbuildv2_repository.cloudbuild_repository.id
     push {
-      branch = ".*"
+      branch = "main"
     }
   }
   filename = "cloudbuild.yaml"
